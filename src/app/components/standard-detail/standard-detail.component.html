@@ -1,0 +1,67 @@
+<div class="row justify-content-center mt-5" id="form">
+  <div class="col-md-8">
+    <form [formGroup]="updateForm" (ngSubmit)="onUpdate()">
+      <div class="row">
+        <div class="form-group col">
+          <label><strong>Name</strong></label>
+          <input class="form-control" type="text" formControlName="name" required>
+        </div>
+
+        <div class="form-group col">
+          <label><strong>Code</strong></label>
+          <input class="form-control" type="text" formControlName="code" required>
+        </div>
+    </div>
+
+    <div class="row">
+      <div class="form-group col">
+          <label><strong>Description</strong></label>
+          <input class="form-control" type="text" formControlName="description" required>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group col">
+          <label><strong>Publication</strong></label>
+          <input class="form-control" type="text" formControlName="dtpublication" required>
+        </div>
+
+        <div class="form-group col">
+          <label><strong>Model</strong></label>
+          <input class="form-control" type="text" formControlName="model" required>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group col">
+          <label><strong>Business</strong></label>
+          <input class="form-control" type="text" formControlName="business" required>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group col">
+            <label><strong>Resume</strong></label>
+            <textarea class="form-control" type="text" row="3" formControlName="resume" required>
+            </textarea>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="form-group col">
+          <label><strong>User</strong></label>
+          <input class="form-control" type="text" formControlName="user" required>
+        </div>
+
+        <div class="form-group col">
+          <label><strong>Email</strong></label>
+          <input class="form-control" type="text" formControlName="email" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+      <button class="btn btn-primary btn-block" type="submit">Update</button>
+      </div>
+    </form>
+  </div>
+</div>

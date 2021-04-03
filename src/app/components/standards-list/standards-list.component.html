@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h2 class="h2">Standards List</h2>
+  </div>
+
+  <div class="table-responsive">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+<!--      <th scope="col">Id</th> -->
+          <th scope="col">Name</th>
+          <th scope="col">Code</th>
+          <th scope="col">Description</th>
+          <th scope="col">Publication</th>
+          <th scope="col">Model</th>
+          <th scope="col">Business</th>
+          <th scope="col">Resume</th>
+          <th scope="col">User</th>
+          <th scope="col">Email</th>
+          <th class="text-center" scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let standard of Standards; let i = index">
+<!--      <th scope="row">{{standard._id}}</th> -->
+          <td>{{standard.name}}</td>
+          <td>{{standard.code}}</td>
+          <td>{{standard.description}}</td>
+          <td>{{standard.dtpublication}}</td>
+          <td>{{standard.model}}</td>
+          <td>{{standard.business}}</td>
+          <td>{{standard.resume}}</td>
+          <td>{{standard.user}}</td>
+          <td>{{standard.email}}</td>
+          <td class="text-center">
+            <button class="btn btn-sm btn-primary" routerLink="/edit-standard/{{standard._id}}">Edit</button>
+            <button class="btn btn-sm btn-danger" (click)="delete(standard._id, i)">Delete</button>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

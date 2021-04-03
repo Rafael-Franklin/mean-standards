@@ -1,0 +1,12 @@
+tbody {
+  background-image: url('../../../image/background.png');
+}
+
+thead{
+  background-color: lightgray;
+}
+
+table, th, td, thead {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
